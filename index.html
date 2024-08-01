@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bet On It</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bet On It</h1>
+        <div class="game-panel">
+            <div class="reels">
+                <div class="reel" id="reel1" placeholder="$"></div>
+                <div class="reel" id="reel2" placeholder="$"></div>
+                <div class="reel" id="reel3" placeholder="$"></div>
+            </div>
+           
+            
+            <div class="controls">
+                <div class="control">
+                    <label for="deposit">Deposit:</label>
+                    <input type="number" id="deposit" placeholder="Enter deposit amount">
+                </div>
+                <div class="control">
+                    <label for="lines">Number of Lines:</label>
+                    <input type="number" id="lines" placeholder="1-3">
+                </div>
+                <div class="control">
+                    <label for="bet">Bet per Line:</label>
+                    <input type="number" id="bet" placeholder="Enter bet amount">
+                </div>
+                <button id="spin-button">Spin</button>
+            </div>
+        </div>
+        <div class="results">
+            <p id="balance-display">Balance: $0</p>
+            <p id="winnings-display"></p>
+        </div>
+        
+    </div>
+    <script src="project.js"></script>
+</body>
+</html>

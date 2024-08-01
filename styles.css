@@ -1,0 +1,187 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom right, #515f22, #6cd281);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    background: rgba(11, 48, 2, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(160, 201, 35, 0.701);
+    max-width: 400px;
+    width: 90%;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #cabf22;
+    text-shadow: 2px 2px 4px rgba(123, 214, 42, 0.5);
+    animation: textGlow 1.5s infinite alternate;
+}
+
+@keyframes textGlow {
+    from {
+        text-shadow: 2px 2px 5px rgba(243, 156, 18, 0.5);
+    }
+    to {
+        text-shadow: 2px 2px 20px rgba(243, 156, 18, 1);
+    }
+}
+
+.game-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.reels {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.reel {
+    background: #ecf0f1;
+    color: #2c3e50;
+    font-size: 1.5em;
+    padding: 20px;
+    border-radius: 5px;
+    min-width: 60px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease-in-out;
+    transform-style: preserve-3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    width: 100%;
+}
+
+.control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+label {
+    font-size: 1em;
+    margin-bottom: 5px;
+    color: #f1c40f;
+}
+
+input {
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    width: calc(100% - 16px);
+    background: #ecf0f1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    padding: 10px 30px;
+    font-size: 1.2em;
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(45deg, #c0392b, #e74c3c);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+.results {
+    margin-top: 20px;
+}
+
+#balance-display {
+    font-size: 1.5em;
+    color: #27ae60;
+}
+/* Basic styles for the money bag */
+.money-bag {
+    position: fixed; /* Fixes the element to the viewport */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    background-image: url('money-bag-png-19739.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0; /* Start hidden */
+    animation: appearDisappear 1s ease-in-out;
+}
+
+/* Keyframes for appearing and disappearing */
+@keyframes appearDisappear {
+    0% {
+        opacity: 0; /* Start invisible */
+    }
+    10% {
+        opacity: 1; /* Fade in */
+    }
+    50% {
+        opacity: 1; /* Remain visible */
+    }
+    60% {
+        opacity: 0; /* Fade out */
+    }
+    100% {
+        opacity: 0; /* Ensure it remains hidden */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .reel {
+        font-size: 1em;
+        padding: 15px;
+        height: 80px;
+    }
+
+    button {
+        padding: 8px 20px;
+        font-size: 1em;
+    }
+}
